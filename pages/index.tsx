@@ -1,7 +1,12 @@
+import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+const Home: React.FC = () => {
+  let firstName: string ='hello world';
+  let isLoading: boolean;
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +16,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to {firstName} 
         </h1>
 
         <p className={styles.description}>
@@ -63,3 +68,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
